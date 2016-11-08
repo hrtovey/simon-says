@@ -1,0 +1,260 @@
+* {
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+
+html, body {
+	background: #111111;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.ss {
+    width:100%;
+    max-width:460px;
+    margin:auto;
+    margin-top: 10px;
+    position:relative;
+}
+
+
+.ss-wrapper {
+	font-size: 1em;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.ss-wrapper li {
+	position: absolute;
+    font-size: 1.5em;
+    width: 10em;
+    height: 10em;
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    overflow: hidden;
+    left: 50%;
+    top: 50%;
+    margin-top: -1.3em;
+    margin-left: -10em;
+    -webkit-transition: border .3s ease;
+    -moz-transition: border .3s ease;
+    transition: border .3s ease;
+}
+
+
+
+
+.cn-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    z-index: 2;
+}
+
+#green.pressed {
+	fill: #64FFB4;
+}
+
+#red.pressed {
+	fill: #FF84B4;
+}
+
+#yellow.pressed {
+	fill: #FFFFCC;
+}
+
+#blue.pressed {
+	fill: #00FFFF;
+}
+
+
+#green.clickable, #red.clickable, #yellow.clickable, #blue.clickable {
+	cursor: pointer;
+}
+
+.restart-button.unclickable {
+  border-color:#ababab;
+  color: #ababab;
+}
+
+.restart-button.unclickable:hover {
+  background:none;
+}
+
+
+.counter-display {    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 13vw;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  text-align: center;
+}
+
+@media (min-width: 460px) {
+  .counter-display {
+    font-size:60px;
+  }
+}
+
+.counter-display.game-over {
+    font-size: 20px;
+    top: 207px;
+    text-transform: uppercase;
+}
+
+.counter-display.you-win {
+    font-size: 20px;
+    top: 217px;
+    text-transform: uppercase;
+}
+
+.buttons {
+    width:75px;
+    margin:auto;
+    margin-top:10px;
+}
+
+
+/*  Toggle   */
+
+.switch {
+    width:75px;
+}
+.cmn-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden; }
+
+.cmn-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none; }
+
+input.cmn-toggle-round-flat + label {
+  padding: 2px;
+  width: 75px;
+  border-radius:20px;
+  height: 30px;
+  background-color: #ababab;
+  transition: background 0.4s; }
+
+input.cmn-toggle-round-flat + label:before,
+input.cmn-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: ""; }
+
+input.cmn-toggle-round-flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  border-radius: 20px;
+  background-color: #fff;
+  transition: background 0.4s; }
+
+input.cmn-toggle-round-flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 22px;
+  border-radius: 50%;
+  background-color: #ababab;
+  transition: margin 0.4s, background 0.4s; }
+
+input.cmn-toggle-round-flat:checked + label {
+  background-color: #e1425a; }
+
+input.cmn-toggle-round-flat:checked + label:after {
+  margin-left: 45px;
+  background-color: #e1425a; }
+
+
+.strict-label {
+    text-align:center;
+    color:#FFFFFF;
+    text-transform:uppercase;
+    font-size: 12px;
+    margin-top:5px;
+    letter-spacing: .5px;
+}
+
+.hide {
+   display:none;
+}
+
+.start-button {
+    width: 75px;
+    height: 30px;
+    border-radius: 20px;
+    border: 2px solid #32a45a;
+    background: #111111;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom:5px;
+    cursor:pointer;
+    letter-spacing: .5px;
+}
+
+.start-button:hover {
+    background:#32a45a;
+}
+
+.restart-button {
+    width: 75px;
+    height: 30px;
+    border-radius: 20px;
+    border: 2px solid #f6af66;
+    background: #111111;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom:5px;
+    cursor:pointer;
+    letter-spacing: .5px;
+}
+
+.restart-button:hover {
+    background:#f6af66;
+}
+
+
+.icon {
+  width:25%;
+  top:-2px;
+}
+
+
+
+
+
+
+
+
+
